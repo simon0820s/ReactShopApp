@@ -1,11 +1,11 @@
-import { FaBeer } from 'react-icons/fa';
+import SideBar from "./components/shared/SideBar"
 
 function App() {
 
   return (
     <>
-    <div className="bg-gray-900 h-screen w-screen ">
-      <FaBeer/>
+    <div className="bg-[#262837] h-screen w-screen ">
+      <SideBar/>
     </div>
     </>
   )
