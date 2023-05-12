@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion"
 
 const SidebarItem = ({children,url}) => {
+  useState
   return (
     <li className="p-4 rounded-tl-xl rounded-bl-xl hover:bg-[#262837] group transition-colors duration-300">
       <a href={url} className="inline-block p-4 box-content rounded-lg text-[#ec7c6a] group-hover:bg-[#ec7c6a] group-hover:text-white transition-colors duration-300">
