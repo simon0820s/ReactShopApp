@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {RiHome2Line,RiPercentLine,RiPieChartLine,RiMailOpenLine,RiSettings4Fill,RiLoginBoxLine, RiLogoutBoxLine} from "react-icons/ri";
-import SidebarItem from "./Item";
+import SidebarItem from "./SidebarItem";
 import { motion } from "framer-motion"
 
 const SideBar=()=>{
