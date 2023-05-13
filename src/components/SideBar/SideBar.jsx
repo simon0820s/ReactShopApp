@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import {RiHome2Line,RiPercentLine,RiPieChartLine,RiMailOpenLine,RiSettings4Fill,RiLoginBoxLine, RiLogoutBoxLine} from "react-icons/ri";
 import SidebarItem from "./Item";
 import { motion } from "framer-motion"
 
 const SideBar=()=>{
+    const [activeItem,setActiveItem]=useState('home')
+
+    const handleActive=(item)=>{
+        console.log(item)
+        setActiveItem(item)
+    }
+
     return(
         <motion.div
             className="bg-[#1F1D2B] fixed left-0 top-0 w-28 h-full rounded-md"
@@ -12,51 +19,57 @@ const SideBar=()=>{
             transition={{ duration: 1 }}
 >
             <ul className="pl-4 h-2/4 flex flex-col justify-between">
+
                 <motion.h1
                  className="text-center text-2xl font-bold text-gray-400 top-4"
                  initial={{ opacity: 0, scale: 0.5 }}
                  animate={{ opacity: 1, scale: 1,}}
-                 transition={{ duration: 3, delay:3 }}
+                 transition={{ duration: 1.5, delay:1.5}}
                  >LOGO</motion.h1>
 
                 <motion.div 
                     initial={{opacity:0, y: -200}}
                     animate={{opacity:1, y: 0 }}
                     transition={{ duration: 1, delay:0.6}}
+                    onClick={()=>handleActive('home')}
                     >
-                    <SidebarItem><RiHome2Line url={"#"}/></SidebarItem>
+                    <SidebarItem active={activeItem==='home'} ><RiHome2Line url={"#"}/></SidebarItem>
                 </motion.div>
 
                 <motion.div 
                     initial={{opacity:0, y: -200}}
                     animate={{opacity:1, y: 0 }}
                     transition={{ duration: 1, delay:0.9}}
+                    onClick={()=>handleActive('per')}
                     >
-                    <SidebarItem><RiPercentLine url={"#"}/></SidebarItem>
+                    <SidebarItem active={activeItem==='per'}><RiPercentLine url={"#"}/></SidebarItem>
                 </motion.div>
 
                 <motion.div 
                     initial={{opacity:0, y: -200}}
                     animate={{opacity:1, y: 0 }}
                     transition={{ duration: 1, delay:1.2}}
+                    onClick={()=>handleActive('pie')}
                     >
-                    <SidebarItem><RiPieChartLine url={"#"}/></SidebarItem>
+                    <SidebarItem active={activeItem==='pie'}><RiPieChartLine url={"#"}/></SidebarItem>
                 </motion.div>
 
                 <motion.div 
                     initial={{opacity:0, y: -200}}
                     animate={{opacity:1, y: 0 }}
                     transition={{ duration: 1, delay:1.5}}
+                    onClick={()=>handleActive('mail')}
                     >
-                    <SidebarItem><RiMailOpenLine url={"#"}/></SidebarItem>
+                    <SidebarItem active={activeItem==='mail'}><RiMailOpenLine url={"#"}/></SidebarItem>
                 </motion.div>
 
                 <motion.div 
                     initial={{opacity:0, y: -200}}
                     animate={{opacity:1, y: 0 }}
                     transition={{ duration: 1, delay:1.8}}
+                    onClick={()=>handleActive('settings')}
                     >
-                    <SidebarItem><RiSettings4Fill url={"#"}/></SidebarItem>
+                    <SidebarItem active={activeItem==='settings'} onClick={()=>handleActive('settings')}><RiSettings4Fill url={"#"}/></SidebarItem>
                 </motion.div>
             </ul>
             <motion.div
