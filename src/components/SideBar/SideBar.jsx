@@ -73,12 +73,12 @@ const SideBar=()=>{
                 </motion.div>
             </ul>
             <motion.div
-             className="pl-8 mt-96 rounded-tl-xl rounded-bl-xl hover:bg-[#262837] group transition-colors duration-300"
+             className="pl-8 mt-96 rounded-tl-xl rounded-bl-xl group transition-colors duration-300"
              initial={{ y: 100 }}
              animate={{ y: 0 }}
              transition={{ duration: 1.5, delay:2}}
              >
-                    <a href="#" className="inline-block p-4 box-content rounded-lg text-[#ec7c6a] group-hover:bg-[#ec7c6a] group-hover:text-white transition-colors duration-300">
+                    <a href="#" className="inline-block p-4 box-content rounded-lg text-[#ec7c6a] group-hover:bg-[#ec7c6a] group-hover:text-white transition-colors duration-500">
                         <div className="text-2xl text-center"><RiLoginBoxLine/></div>
                     </a>
             </motion.div>
