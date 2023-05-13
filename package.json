@@ -1,4 +1,5 @@
 {
+  "homepage": "http://simon0820s.github.io/ReactShopApp",
   "name": "shop_app",
   "private": true,
   "version": "0.0.0",
@@ -7,10 +8,14 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
   },
   "dependencies": {
     "framer-motion": "^10.12.10",
+    "gh-pages": "^5.0.0",
     "motion": "^10.15.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
